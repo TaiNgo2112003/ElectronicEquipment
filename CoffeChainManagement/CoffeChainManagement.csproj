@@ -1,0 +1,852 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB7C0C44-C172-437A-BC6E-6F3A4BCE33B0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CoffeChainManagement</RootNamespace>
+    <AssemblyName>Electronic Equipment App</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\taing\OneDrive\Máy tính\DotNet_Full\File_Thuc_Thi\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3C36D50AF76DA32EB3CE33BE4A25F43B2E5D6F4F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CoffeChainManagement_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxMin, Version=5.14.5506.26196, Culture=neutral, PublicKeyToken=21ef50ce11b5d80f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxMin.5.14.5506.26202\lib\net40\AjaxMin.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Gmap.net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.Net.1.0.1\lib\Gmap.net.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=1.7.5.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WindowsForms.1.7.5\lib\net40\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AccountController.cs" />
+    <Compile Include="Controller\InventoryController.cs" />
+    <Compile Include="Data\CoffeChainManagementDBDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet221.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet221.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSetCategory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSetCategory.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSetProduct.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSetProduct.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSetSupplier.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSetSupplier.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\BaseController.cs" />
+    <Compile Include="Controller\EmployeeController.cs" />
+    <Compile Include="Controller\IController.cs" />
+    <Compile Include="Controller\ProductController.cs" />
+    <Compile Include="Controller\PromotionController.cs" />
+    <Compile Include="Controller\StoreController.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Employee_.cs" />
+    <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Promotion.cs" />
+    <Compile Include="Models\Shipping.cs" />
+    <Compile Include="Models\Shops.cs" />
+    <Compile Include="Models\Supplier.cs" />
+    <Compile Include="Views\accountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\accountForm.Designer.cs">
+      <DependentUpon>accountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddCoffeeShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddCoffeeShop.Designer.cs">
+      <DependentUpon>AddCoffeeShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\addEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\addEmployee.Designer.cs">
+      <DependentUpon>addEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet9.cs">
+      <DependentUpon>CoffeChainManagementDBDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CoffeChainManagementDBDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeChainManagementDBDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\customerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\customerForm.Designer.cs">
+      <DependentUpon>customerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Db\DbConnection_.cs" />
+    <Compile Include="Views\DetailCoffeeShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DetailCoffeeShop.Designer.cs">
+      <DependentUpon>DetailCoffeeShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Icon\User.cs" />
+    <Compile Include="Data\inventoryDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>inventoryDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Views\inventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\inventoryForm.Designer.cs">
+      <DependentUpon>inventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Main_Form_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Main_Form_User.Designer.cs">
+      <DependentUpon>Main_Form_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dashboard.cs" />
+    <Compile Include="Views\orderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\orderForm.Designer.cs">
+      <DependentUpon>orderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\productForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\productForm.Designer.cs">
+      <DependentUpon>productForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Views\Product_CLient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Product_CLient.Designer.cs">
+      <DependentUpon>Product_CLient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\promotionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\promotionsForm.Designer.cs">
+      <DependentUpon>promotionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\shippingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\shippingForm.Designer.cs">
+      <DependentUpon>shippingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShoppingCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ShoppingCart.Designer.cs">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\supportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\supportForm.Designer.cs">
+      <DependentUpon>supportForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\accountForm.resx">
+      <DependentUpon>accountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddCoffeeShop.resx">
+      <DependentUpon>AddCoffeeShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\addEmployee.resx">
+      <DependentUpon>addEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\customerForm.resx">
+      <DependentUpon>customerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DetailCoffeeShop.resx">
+      <DependentUpon>DetailCoffeeShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\inventoryForm.resx">
+      <DependentUpon>inventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main_Form_User.resx">
+      <DependentUpon>Main_Form_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\orderForm.resx">
+      <DependentUpon>orderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\productForm.resx">
+      <DependentUpon>productForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Product_CLient.resx">
+      <DependentUpon>Product_CLient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\promotionsForm.resx">
+      <DependentUpon>promotionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\shippingForm.resx">
+      <DependentUpon>shippingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShoppingCart.resx">
+      <DependentUpon>ShoppingCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\supportForm.resx">
+      <DependentUpon>supportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Data\Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CoffeChainManagement_TemporaryKey.pfx" />
+    <None Include="Data\CoffeChainManagementDBDataSet1.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet1.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet10.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet10.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet11.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet11.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet12.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet12.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet13.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet13.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet14.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet14.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet15.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet15.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet16.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet16.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet17.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet17.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet18.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet18.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet19.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet19.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet2.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet2.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet20.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet20.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet21.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet21.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet221.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet221.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet221.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet221.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet221.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet221.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet3.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet3.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet31.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet31.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet4.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet4.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet5.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet5.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet6.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet6.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet7.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet7.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet8.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet8.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet9.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSet9.xss">
+      <DependentUpon>CoffeChainManagementDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetCategory.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSetCategory.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetCategory.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSetCategory.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetCategory.xss">
+      <DependentUpon>CoffeChainManagementDBDataSetCategory.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetProduct.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSetProduct.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetProduct.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSetProduct.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetProduct.xss">
+      <DependentUpon>CoffeChainManagementDBDataSetProduct.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetSupplier.xsc">
+      <DependentUpon>CoffeChainManagementDBDataSetSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetSupplier.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CoffeChainManagementDBDataSetSupplier.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\CoffeChainManagementDBDataSetSupplier.xss">
+      <DependentUpon>CoffeChainManagementDBDataSetSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="Data\inventoryDataset.xsc">
+      <DependentUpon>inventoryDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Data\inventoryDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>inventoryDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\inventoryDataset.xss">
+      <DependentUpon>inventoryDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\user_1077063.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chart.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shippingIcon.png" />
+    <None Include="Resources\supportIcon.png" />
+    <None Include="Resources\icons8-shopping-cart-50.png" />
+    <None Include="Resources\register.png" />
+    <None Include="Resources\icons8-shipping-40.png" />
+    <None Include="Resources\icons8-shipping-16.png" />
+    <None Include="Resources\icons8-product-50.png" />
+    <None Include="Resources\icons8-order-48.png" />
+    <None Include="Resources\icons8-inventory-48.png" />
+    <None Include="Resources\icons8-menu-50.png" />
+    <None Include="Resources\icons8-home-40.png" />
+    <None Include="Resources\icons8-home-50.png" />
+    <None Include="Resources\icons8-employee-48.png" />
+    <None Include="Resources\icons8-promotion-40.png" />
+    <None Include="Resources\employee-50.png" />
+    <Content Include="Resources\employee.png" />
+    <None Include="Resources\icons8-account-50.png" />
+    <None Include="Resources\icons8-analytics-50.png" />
+    <None Include="Resources\icons8-detail-50.png" />
+    <Content Include="Resources\icons8-employee-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
